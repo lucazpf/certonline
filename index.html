@@ -1,114 +1,102 @@
 <html>
-    <head>
-        <title>Certonline.it</title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
-        <link href='https://fonts.googleapis.com/css?family=Lato:300,400,700' rel='stylesheet' type='text/css'>
-        <link href='custom.css' rel='stylesheet' type='text/css'>
-    </head>
-    <body>
 
-        <div class="container">
+<head>
+    <title>Certonline.it</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Lato:300,400,700' rel='stylesheet' type='text/css'>
+    <link href='custom.css' rel='stylesheet' type='text/css'>
+</head>
 
-            <div class="row">
+<body>
 
-                <div class="col-lg-8 col-lg-offset-2">
+    <div class="container">
 
-                    <h1>Visura catastale</h1>
+        <div class="row">
 
-                    <p class="lead">La visura catastale consente di visionare per un singolo immobile (sia esso terreno o fabbricato) i dati catastali (foglio, particella, e se ad esso assegnato subalterno, quet'ultimo detto anche sub) e anche altri dati di natura tecnica e amministrativa.</p>
-                    <h3>Costo: 12,00 &euro;</h3>
-                    <hr>
-                    <h4>Dati richiedente</h4>
+            <div class="col-lg-8 col-lg-offset-2">
 
-                    <form id="contact-form" method="post" action="salva_richiedente.php" role="form">
+                <h1>Visura catastale</h1>
 
-                        <div class="messages"></div>
+                <p class="lead">La visura catastale consente di visionare per un singolo immobile (sia esso terreno o fabbricato) i dati catastali (foglio, particella, e se ad esso assegnato subalterno, quest'ultimo detto anche sub) e anche altri dati di natura tecnica
+                    e amministrativa.</p>
+                <h3>Costo: 12,00 &euro;</h3>
 
-                        <div class="controls">
 
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <div class="form-group">
-                                        <!--<label for="form_name">Nome e cognome *</label>-->
-                                        <input id="form_name" type="text" name="name" class="form-control" placeholder="Nome e Cognome *" required="required" data-error="Prego inserire un Nome e Cognome del richiedente">
-                                        <div class="help-block with-errors"></div>
-                                    </div>
+                <form id="contact-form" method="post" action="salva_richiesta.php" role="form">
+
+                    <div class="messages"></div>
+
+                    <div class="controls">
+
+                        <div class="row">
+
+
+                            <div class="col-md-12">
+                                <hr>
+                                <h4>Sezione catastale</h4>
+                                <div class="form-group">
+
+                                    <ul class="list-inline">
+                                        <li><input type="radio" name="catasto" value="terreno" required="required" data-error="Campo richiesto"> Catasto Terreni </li><br>
+                                        <li> <input type="radio" name="catasto" value="fabbricato" required="true"> Catasto Fabbricati</li>
+                                    </ul>
+                                    <div class="help-block with-errors"></div>
+
                                 </div>
-                                <div class="col-md-6">
-                                    <div class="form-group">
-                                        <input id="form_lastname" type="text" name="surname" class="form-control" placeholder="Email *" required="required" data-error="Prego fornire un indirizzo email valido">
-                                        <div class="help-block with-errors"></div>
-                                    </div>
-                                </div>
+
+
                             </div>
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <div class="form-group">
-                                        <input id="form_email" type="email" name="email" class="form-control" placeholder="Telefono *" required="required" data-error="Prego fornire un recapito telefonico">
-                                        <div class="help-block with-errors"></div>
-                                    </div>
-                                </div>
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <h4>Dati in proprio possesso</h4>
 
-                                <div class="col-md-12">
-                                  <hr>
-                                    <div class="form-group">
-                                      <h4>Dati in proprio possesso</h4>
-
-<ul class="list-inline">
-<li><input type="radio" id="dati_catasto" name="dati_disponibili" value="Dati Catastali" required="required" data-error="Campo richiesto"> Dati Catastali </li><br>
-<li><input type="radio" id="dati_intestatario" name="dati_disponibili" value="Dati Anagrafici"> Dati Anagrafici Intestatario (o almeno uno degli intestatari se cointestato)</li>
-<li><input type="radio" id="dati_indirizzo" name="dati_disponibili" value="Dati Civico"> Dati relativi all'indirizzo dell'immobile (sia esso <b>fabbricato</b> o <b>terreno</b>) </li>
-</ul>
-<div class="help-block with-errors"></div>
-</div>
-
+                                    <ul class="list-inline">
+                                        <li><input type="radio" name="dati" value="dati_catastali" required="required" data-error="Campo richiesto"> Dati Catastali </li><br>
+                                        <li><input type="radio" name="dati" value="dati_anagrafici"> Dati Anagrafici Intestatario (o almeno uno degli intestatari se cointestato)</li>
+                                        <li><input type="radio" name="dati" value="civico"> Dati relativi all'indirizzo dell'immobile (sia esso <b>fabbricato</b> o <b>terreno</b>) </li>
+                                    </ul>
+                                    <div class="help-block with-errors"></div>
 
                                 </div>
-                                <div class="col-md-12">
-                                  <h4>Sezione catastale</h4>
-                                    <div class="form-group">
 
-<ul class="list-inline">
-<li><input type="radio" name="tipo_catasto" value="Catasto Terreni" required="required" data-error="Campo richiesto"> Catasto Terreni </li><br>
-<li>  <input type="radio" name="tipo_catasto" value="Catasto Fabbricati" required="true"> Catasto Fabbricati</li>
-</ul>
-<div class="help-block with-errors"></div>
-</div>
-
-                                    </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-md-12">
-                                    <div class="form-group">
-                                        <label for="form_message">Comunicazioni aggiuntive</label>
-                                        <textarea id="form_message" name="message" class="form-control" rows="4"></textarea>
-                                        <div class="help-block with-errors"></div>
-                                    </div>
-                                </div>
-                                <div class="col-md-12">
-                                    <input type="submit" class="btn btn-success btn-send" value="Prosegui >">
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-md-12">
-                                    <p class="text-muted"><strong>*</strong> I campi contrassegnati sono obbligatori</p>
-                                </div>
                             </div>
                         </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <label for="form_message">Comunicazioni aggiuntive</label>
+                                    <textarea id="form_message" name="messaggio" class="form-control" rows="4"></textarea>
+                                    <div class="help-block with-errors"></div>
+                                </div>
+                            </div>
+                            <div class="col-md-12">
+                                <input type="submit" class="btn btn-success btn-send" value="Prosegui >">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <p class="text-muted"><strong>*</strong> I campi contrassegnati sono obbligatori</p>
+                            </div>
+                        </div>
+                    </div>
 
-                    </form>
+                </form>
 
-                </div><!-- /.8 -->
+            </div>
+            <!-- /.8 -->
 
-            </div> <!-- /.row-->
+        </div>
+        <!-- /.row-->
 
-        </div> <!-- /.container-->
+    </div>
+    <!-- /.container-->
 
-        <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-        <script src="validator.js"></script>
-        <script src="contact.js"></script>
-    </body>
+    <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <script src="validator.js"></script>
+    <script src="contact.js"></script>
+</body>
+
 </html>

@@ -1,8 +1,12 @@
 <?php
 
-if (isset($_POST['dati_disponibili'])){
-      $q1 = $_POST['dati_disponibili'];
-      echo $q1;
+if (isset($_POST['dati'])){
+      $catasto = $_POST['catasto'];
+      $dati = $_POST['dati'];
+      $messaggio = $_POST['messaggio'];
+      echo "Sezione Catastale: ". $catasto."<br>";
+      echo "Dati disponibili: ". $dati."<br>";
+      echo "Messaggio: ". $messaggio;
   }
 
  ?>
