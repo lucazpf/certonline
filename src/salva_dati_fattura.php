@@ -15,5 +15,5 @@ $password = 'audia3';
 $database = 'certonline';
  //Aggiunto commento per prova
 $con = mysqli_connect($host, $user, $password, $database);
-mysqli_query($con, "INSERT INTO dati_fatture (intestazione, piva_cf, via, loc, prov, cap, tel, email) VALUES ('$intestazione', '$piva_cf', '$via', '$loc', '$prov', '$cap', '$tel', '$email')");
+mysqli_query($con, "INSERT INTO dati_fatturazione (intestazione, piva_cf, via, loc, prov, cap, tel, email) VALUES ('$intestazione', '$piva_cf', '$via', '$loc', '$prov', '$cap', '$tel', '$email')");
 mysqli_close($con);
