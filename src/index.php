@@ -16,15 +16,14 @@
         <div class="row">
 
             <div class="col-lg-8 col-lg-offset-2">
-
-                <h1>Visura catastale</h1>
+                <h1><a href="index.php">Visura catastale</a></h1>
 
                 <p class="lead">La visura catastale consente di visionare per un singolo immobile (sia esso terreno o fabbricato) i dati catastali (foglio, particella, e se ad esso assegnato subalterno, quest'ultimo detto anche sub) e anche altri dati di natura tecnica
                     e amministrativa.</p>
                 <h3>Costo: 12,00 &euro;</h3>
 
 
-                <form id="contact-form" method="post" action="salva_richiesta.php" role="form">
+                <form id="contact-form" method="post" action="dati_fattura.php" role="form">
 
                     <div class="messages"></div>
 
@@ -67,7 +66,7 @@
                             <div class="col-md-12">
                                 <div class="form-group">
                                     <label for="form_message">Comunicazioni aggiuntive</label>
-                                    <textarea id="form_message" name="messaggio" class="form-control" rows="4"></textarea>
+                                    <textarea id="form_message" name="messaggio" class="form-control" rows="4" required="required" data-error="Obbligatorio inserire un messaggio."></textarea>
                                     <div class="help-block with-errors"></div>
                                 </div>
                             </div>
